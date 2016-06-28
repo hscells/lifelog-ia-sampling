@@ -44,7 +44,7 @@ To start the process, run:
 ## Mapping
 
 todo (I forgot what these files do but they are here for historical
-reasons ¯\\_(ツ)_/¯)
+reasons ¯\\\_(ツ)\_/¯)
  
 # License
 
