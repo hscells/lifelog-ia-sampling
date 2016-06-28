@@ -1,0 +1,1 @@
+./tmpcluster $1
