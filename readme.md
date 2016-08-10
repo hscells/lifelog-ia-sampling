@@ -45,6 +45,34 @@ To start the process, run:
 
 todo (I forgot what these files do but they are here for historical
 reasons ¯\\\_(ツ)\_/¯)
+
+## Importing the data
+
+Once all the above steps are all done, you may wish to import the 
+clustered image data into a database. For my own reasons, I'm using a 
+Postgres database, so my script will only work for this type of 
+database.
+
+Before importing, you must set four environment variables:
+
+```
+export LIFELOG_DB_USER="username"
+export LIFELOG_DB_PASS="secret"
+export LIFELOG_DB_HOST="your.database.url"
+export LIFELOG_DB_NAME="databasename"
+```
+ 
+To kick off this process, run:
+
+ - `./import.sh path/to/cluster/folder output.json`
+ 
+This will run two python scripts that will firstly convert the directory
+that contains the clusters into a JSON blob, and secondly import that
+blob into a database.
+
+If you would like to _only_ create the JSON blob, you may run:
+
+ - `python import/cluster_to_json.py path/to/cluster/folder output.json`
  
 # License
 

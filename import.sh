@@ -1,0 +1,1 @@
+python import/cluster_to_json.py $1 $2 && python import/import_clusters.py $2
