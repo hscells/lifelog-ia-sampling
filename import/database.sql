@@ -4,8 +4,8 @@ DROP TABLE IF EXISTS
   annotated_tag_images,
   assessment_concepts,
   annotated_assessment_images,
-  annotated_query_images
-  images
+  annotated_query_images,
+  images,
   people
 CASCADE;
 

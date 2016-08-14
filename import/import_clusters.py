@@ -12,7 +12,7 @@ def import_json(json_file):
                     os.environ.get("LIFELOG_DB_HOST") is None or \
                     os.environ.get("LIFELOG_DB_NAME") is None:
         print("Environment variables are not set!")
-        os.exit(1)
+        sys.exit(1)
 
     print("Connecting...")
     json_data = json.load(open(json_file))
@@ -24,7 +24,7 @@ def import_json(json_file):
 
     print("Rebuilding tables...")
     sql = open("database.sql", "r").read()
-    cursor.executemany(sql, [])
+    cursor.execute(sql)
     conn.commit()
 
     print("Inserting data...")
