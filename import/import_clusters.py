@@ -4,6 +4,7 @@ import json
 import pg8000
 import argparse
 import os
+import sys
 
 
 def import_json(json_file):
