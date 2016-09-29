@@ -20,13 +20,13 @@ def main(args):
     for path in os.walk(cluster_name):
         image_name = path[0] + "/" + path[2][0]
         if path[2][0][0] != ".":
-            print path[0] + "/" + path[2][0]
+            print(path[0] + "/" + path[2][0])
 
             with open(image_name, "rb") as f:
                 image = Image.open(f)
                 (w, h) = image.size
 
-                image = image.resize((w / 2, h / 2), Image.ANTIALIAS)
+                image = image.resize((int(w / 2), int(h / 2)), Image.ANTIALIAS)
 
                 buffer = cStringIO.StringIO()
                 image.save(buffer, format="JPEG")
